@@ -4,9 +4,22 @@
 
 Este es mi tutorial de Angular y Springboot
 
-Versión Angular CLI: 16.2.12
+## Entorno de Desarrollo y Versiones
 
-Versión JAVA: 21
+### Springboot
+
+Generado por [Spring Initializr](https://start.spring.io/)
+
+- Proyecto: Maven
+- Versión Spring Boot: 3.2.3
+- Group: com.ccsw
+- ArtifactId: tutorial
+- Versión JAVA: 21
+- Dependencies. Web, DataJPA, H2Database
+
+### Angular
+
+- Versión Angular CLI: 16.2.12
 
 ## Para arrancar proyecto
 
