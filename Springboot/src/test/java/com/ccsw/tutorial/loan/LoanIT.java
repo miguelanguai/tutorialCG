@@ -123,13 +123,6 @@ public class LoanIT {
         assertEquals(LOANS_WITH_FILTER, response.getBody().size());
     }
 
-//    A Partir
-//    de aqui, de
-//    momento no.
-//    Para ir
-//    probando de
-//    uno en uno
-
     @Test
     public void findNotExistsGameShouldReturnEmpty() {
 
@@ -163,7 +156,7 @@ public class LoanIT {
     }
 
     @Test
-    public void findNotExistsTitleOrCategoryShouldReturnEmpty() {
+    public void findNotExistsTitleOrClientShouldReturnEmpty() {
 
         int LOANS_WITH_FILTER = 0;
 
@@ -193,38 +186,5 @@ public class LoanIT {
         assertNotNull(response);
         assertEquals(LOANS_WITH_FILTER, response.getBody().size());
     }
-
-//    @Test
-//    public void saveWithoutIdShouldCreateNewLoan() {
-//
-//        LoanDto dto = new LoanDto();
-//        AuthorDto authorDto = new AuthorDto();
-//        authorDto.setId(1L);
-//
-//        CategoryDto categoryDto = new CategoryDto();
-//        categoryDto.setId(1L);
-//
-//        dto.setTitle(NEW_TITLE);
-//        dto.setAge("18");
-//        dto.setAuthor(authorDto);
-//        dto.setCategory(categoryDto);
-//
-//        Map<String, Object> params = new HashMap<>();
-//        params.put(GAME_ID_PARAM, NEW_TITLE);
-//        params.put(CLIENT_ID_PARAM, null);
-//
-//        ResponseEntity<List<LoanDto>> response = restTemplate.exchange(getUrlWithParams(), HttpMethod.GET, null,
-//                responseType, params);
-//
-//        assertNotNull(response);
-//        assertEquals(0, response.getBody().size());
-//
-//        restTemplate.exchange(LOCALHOST + port + SERVICE_PATH, HttpMethod.PUT, new HttpEntity<>(dto), Void.class);
-//
-//        response = restTemplate.exchange(getUrlWithParams(), HttpMethod.GET, null, responseType, params);
-//
-//        assertNotNull(response);
-//        assertEquals(1, response.getBody().size());
-//    }
 
 }
