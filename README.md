@@ -44,3 +44,12 @@ Desde el IDE VSCode
     para arrancar el proyecto
 
 - Acudir a <https://localhost:4200>  para verlo funcionando
+
+## Notas y Observaciones
+
+En los apartados realizados por mí, se puede crear clientes además de generar préstamos y filtrarlos en una lista paginada.
+
+Cuando se genera un cliente, salta una excepción si se intenta generar uno con el mismo nombre, así como saltan excepciones cuando se intenta crear préstamos de juegos que están prestados en las mismas fechas y con clientes que ya tienen un juego prestado en las mismas fechas.
+
+En el filtrado de préstamos, se puede ver que , filtrando por
+páginas, al pasar de página no aparecen todo el resto de préstamos ni páginas vacías si se filtra desde las páginas del final (puesto que te manda a la primera página de nuevo)
