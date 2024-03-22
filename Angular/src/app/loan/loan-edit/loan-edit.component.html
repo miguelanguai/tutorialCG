@@ -38,6 +38,11 @@
             <mat-datepicker #endPicker></mat-datepicker>
             <mat-error>La fecha de final no puede estar vacía</mat-error>
         </mat-form-field>
+
+        <mat-error *ngIf="alreadyOnLoanError">
+          Las fechas que ha elegido son inválidas debido a que otro cliente ya tiene un préstamo de este juego o el cliente ya tiene un juego en préstamo
+        </mat-error>
+
     </form>
 
     <div class="buttons">

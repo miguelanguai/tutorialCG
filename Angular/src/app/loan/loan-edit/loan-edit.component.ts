@@ -13,10 +13,11 @@ import { GameService } from 'src/app/game/game.service';
   styleUrls: ['./loan-edit.component.scss']
 })
 export class LoanEditComponent implements OnInit{
-  
+
   loan : Loan;
   games: Game[];
   clients: Client[];
+  alreadyOnLoanError:boolean=false;
 
     constructor(
         public dialogRef: MatDialogRef<LoanEditComponent>,
@@ -48,8 +49,20 @@ export class LoanEditComponent implements OnInit{
     onSave() {
         this.loanService.saveLoan(this.loan).subscribe(result =>  {
             this.dialogRef.close();
-        }); 
-    }  
+        }, error => {
+          console.log("error al guardar");
+          this.alreadyOnLoanError=true;
+        }
+        /*
+        esta es una manera rudimentaria de solucionar el error al guardar (si no se pone nada, el botón Guardar
+          no funciona, y el usuario no recibe ningún mensaje), pero como el backend no devuelve nada
+          más que un error, es lo que hay, por lo que se le envía al usuario un mensaje de error, y él
+          verá que es lo que ha hecho mal, si coger un juego que ya está siendo prestado a otro cliente en
+          esas fechas, o coger un juego con un cliente que ya tiene un préstamo en esas fechas. No se me
+          ocurre otra manera de hacerlo
+        */
+        );
+    }
 
     onClose() {
         this.dialogRef.close();

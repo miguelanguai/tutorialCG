@@ -53,3 +53,6 @@ Cuando se genera un cliente, salta una excepción si se intenta generar uno con 
 
 En el filtrado de préstamos, se puede ver que , filtrando por
 páginas, al pasar de página no aparecen todo el resto de préstamos ni páginas vacías si se filtra desde las páginas del final (puesto que te manda a la primera página de nuevo)
+
+Por otro lado, se arroja error si, al crear préstamos, se crea con un juego que ya está siendo prestado
+a otro cliente por esas fechas o si se crea con un cliente que ya tiene un préstamo en esas fechas.
